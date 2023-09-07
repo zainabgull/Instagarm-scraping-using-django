@@ -1,0 +1,23 @@
+<!-- yourapp/templates/instagram_scrape.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Scraping</title>
+</head>
+<body>
+    <h1>Instagram Scraping</h1>
+    <form method="post" action="{% url 'instagram_scrape' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="hashtag">Hashtag:</label>
+        <input type="text" id="hashtag" name="hashtag" required><br><br>
+
+        <input type="submit" value="Scrape Instagram">
+    </form>
+</body>
+</html>
