@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from instagram_downloader import views
+from instagram_downloader.views import InstagramScrapeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('instagram_scrape/', views.instagram_scrape, name='instagram_scrape'),
+    path('instagram_scrape/', InstagramScrapeView.as_view(), name='instagram_scrape'),
 ]
